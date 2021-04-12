@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+
+body {
+    width: 960px;
+    margin: auto;
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+header img {
+    display: block;
+    width: 140px;
+    margin: auto;
+}
+
+header nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+main h1 { 
+    text-align: center;
+    color: #810000;
+}
+
+main p:nth-child(even){
+    color: #630000;
+    background-color: #ddd;
+    font-family: 'Karma', serif;
+    font-size: 23px;
+    padding: 10px;
+    text-align: center
+    
+}
+
+main p:nth-child(even){
+    word-spacing: 5px;
+    font-weight: 500;
+}
+
+main p:nth-child(odd){
+    word-spacing: 5px;
+}
+
+
+main p:nth-child(odd){
+    color: #810034;
+    background-color: #e8e8e8;
+    font-family: 'Karma', serif;
+    font-size: 23px;
+    padding: 10px;
+    text-align: center
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
