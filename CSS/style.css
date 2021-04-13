@@ -56,6 +56,10 @@ p {
     text-align: center;
 }
 
+main section {
+    text-align: left;
+}
+
 footer {
     text-align: center;
     margin-bottom: 30px;

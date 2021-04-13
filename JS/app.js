@@ -2,7 +2,7 @@
 let Person = prompt("Hello there! Who am I talking to?");
 alert("Greetings dear " + Person + "\n" + "I hope you're enjoying your time" + "\n" + "My family name is Al-Kiswani")
 
-let city = prompt("Based on my family name, Can you guess where am I from?").toLowerCase()
+let city = prompt("Based on my family name, Can you guess where am I from? yes or no").toLowerCase()
 
 switch (city)
 {
@@ -17,7 +17,7 @@ switch (city)
 
 }
 
-let webPage = prompt("Do you think that I built this web page on my own?").toUpperCase()
+let webPage = prompt("Do you think that I built this web page on my own? yes or no").toUpperCase()
 switch (webPage)
 {
     case "YES": 
@@ -30,7 +30,7 @@ switch (webPage)
             alert("Agaain! it was a YES or NO question 😔😏 ")
 }            
 
-let myBackGround = prompt("So, do you think that I studied coding at the university?").toUpperCase()
+let myBackGround = prompt("So, do you think that I studied coding at the university? yes or no").toUpperCase()
 switch (myBackGround)
 {
     case "YES": 
@@ -43,7 +43,7 @@ switch (myBackGround)
             alert("Ooh Com'on! couldn't you just answer with YES, or NO 😔😏 ")
 }       
 
-let age = prompt("well, do you believe that I started learning coding at the age of 34?").toLowerCase()
+let age = prompt("well, do you believe that I started learning coding at the age of 34? yes or no").toLowerCase()
 switch (age)
 {
     case "yes": 
@@ -56,7 +56,7 @@ switch (age)
             alert("Seriously! why do you avoid a simple YES, or NO answer!😨😏 ")
 }       
 
-let final = prompt("Last one, I swear! Have we ever met in person?").toLowerCase()
+let final = prompt("Have we ever met in person? yes or no").toLowerCase()
 switch (final)
 {
     case "yes": 
@@ -70,9 +70,26 @@ switch (final)
 }       
 
 
-// console.log ("who this is " + Person)
-// console.log ("Did you guess my hometown " + city)
-// console.log ("Did I build this web " + webPage)
-// console.log ("Guessed my education " + myBackGround)
-// console.log ("believe I started at 34 " + age)
-// console.log ("is this my friend "  + final);
+let tries;
+
+for (tries = 3; tries >= 0; tries--) {
+    let born = prompt("Guess which year I was born in?");
+    if (born < 1986){
+        alert ("That's too old for my age. " + "you have " + tries + "attempt(s) left")
+    }
+    else if (born > 1986){
+        alert("That's too young for my age. " + "you have " + tries + "attempt(s) left")
+    }
+    else if(tries == 0  || born == 1986){
+        alert("Okay that's it. I was born in 1986")
+    }
+
+}    
+
+
+console.log ("who this is " + Person)
+console.log ("Did you guess my hometown " + city)
+console.log ("Did I build this web " + webPage)
+console.log ("Guessed my education " + myBackGround)
+console.log ("believe I started at 34 " + age)
+console.log ("is this my friend "  + final);
