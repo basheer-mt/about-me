@@ -80,8 +80,30 @@ for (tries = 3; tries >= 0; tries--) {
     else if (born > 1986){
         alert("That's too young for my age. " + "you have " + tries + "attempt(s) left")
     }
-    else if(tries == 0  || born == 1986){
+    else if(tries == 0){
         alert("Okay that's it. I was born in 1986")
+    }
+    else{
+        alert("Spectacular! how did you know that!")
+    }
+
+}    
+
+let attempts;
+
+for (attempts = 5; attempts >= 0; attempts--) {
+    let idea = prompt("Hey TA! This is question number 7, not finished yet!" + "\n" + "still working on it");
+    if (idea < 1986){
+        alert ("That's too old for my age. " + "you have " + attempts + "attempt(s) left")
+    }
+    else if (idea > 1986){
+        alert("That's too young for my age. " + "you have " + attempts + "attempt(s) left")
+    }
+    else if(attempts == 0){
+        alert("Okay that's it. I was born in 1986")
+    }
+    else{
+        alert("Spectacular! how did you know that!")
     }
 
 }    
