@@ -1,12 +1,16 @@
 "use strict";
+let score = 0
+
 let Person = prompt("Hello there! Who am I talking to?");
 alert("Greetings dear " + Person + "\n" + "I hope you're enjoying your time" + "\n" + "My family name is Al-Kiswani")
+
 
 let city = prompt("Based on my family name, Can you guess where am I from? yes or no").toLowerCase()
 switch (city)
 {
     case "yes": 
         alert("Wonderful");
+        score ++;
         break;
     case "no":
         alert("No worries. We are from Jerusalem");
@@ -18,7 +22,8 @@ switch (city)
 
 let webPage = prompt("Do you think that I built this web page on my own? yes or no").toUpperCase()
 
-if(webPage.toUpperCase() == 'YES'){ 
+if(webPage.toUpperCase() == 'YES'){
+    score ++; 
     alert("Ooh! then you know I am a developer! Amazing 😉");
 }
 else if (webPage.toUpperCase() == 'NO'){
@@ -33,6 +38,7 @@ switch (myBackGround)
 {
     case "YES": 
         alert("I wish I did! I studied Mechatronics Engineering 😅");
+        score++;
         break;
     case "NO":
         alert("Correct! I studied Mechtronics Engineering 😔");
@@ -46,6 +52,7 @@ switch (age)
 {
     case "yes": 
         alert(" Yes, you right! 😁");
+        score++;
         break;
     case "no":
         alert("Really! am I that good not to believe 😜	");
@@ -59,9 +66,11 @@ switch (final)
 {
     case "yes": 
         alert(" Greetings once again Dear " + Person +  "😊" + "\n" + "I know it's been a while 😔");
+        score++;
         break;
     case "no":
         alert("Greetings once again Dear " + Person +  "😊" + "\n" + "Hopefully we'll meet soon 😃");
+        score++;
         break;
         default:
             alert("Greetings once again Dear " + Person +  "😊" + "\n" + " You couldn't say YES, or NO! Could you!? 😂 ")
@@ -71,49 +80,51 @@ switch (final)
 let tries;
 for (tries = 3; tries >= 0; tries--) {
     let born = prompt("Guess which year I was born in?");
-    if (born < 1986 && tries != 0){
+    var yearIBorn = parseInt(born);
+    if (yearIBorn < 1986 && tries != 0){
         alert ("That's too old for my age. " + "you have " + tries + "attempt(s) left");
         continue;
     }
-    else if (born > 1986 && tries != 0){
+    else if (yearIBorn > 1986 && tries != 0){
         alert("That's too young for my age. " + "you have " + tries + "attempt(s) left");
         continue;
     }
-    else if (tries == 0){
-        alert ("You have lost all attempts\nthat's it, I was born in 1986 \nGood luck in other time.");
+    else if (tries == 0 || yearIBorn == 1986){
+        alert ("That's it, I was born in 1986");
+        score++;
         break;
-    }
-    else{
-        alert("Spectacular! how did you know that!")
-        break;
-    }    
+    }   
 
 }
 
-let arr = ['A' , 'E' , 'M' , 'O' , 'T' , 'K'];
-alert("yOu are plAying with me ! \n" +
-"I'll AsK you about my favourit English leTter \n"+
-"PleasE Enter a captial letter and you have 8 atteMpts");
-let counter = 0;
-for (var i = 0 ; i < 8 ; i++){
-    let test = prompt("Enter a Capital letter : ");
-    for (var j = 0 ; j < 6 ; j++){
-        if (test == arr[i]){
-            counter += 1;
-            break;
-        }
-        else{
-            continue;
-        }
+let sonName = ['Ahmad ' , 'Saif ' , 'Fares ' , 'Yahya ' , 'Murad ' , 'Omar ' , 'Rayan ' , 'Karam ' , 'Ezziddine ' , 'Amir ' , 'Cesar ' , 'Rakan ' , 'Adam ' , 'Jad ' , 'Jousef ' , 'Aziz '];
+let attempts;
+for (attempts = 5; attempts >= 0; attempts--) {
+    let chooseName = prompt('So, can you guess my sons name now? \n I will make it easier for you: \n Choose from the following \n ' + sonName );
+    if (chooseName == "Ezziddine" && attempts != 0){
+        alert ("WOW! you guessed right!");
+        break;
     }
+    else if (chooseName !== "Ezziddine" && attempts != 0){
+        alert("Noo that's not my son. " + "you have " + attempts + "attempt(s) left");
+        score++;
+        continue;
+    }
+    else if (attempts == 0){
+        alert ("That's it, His name is Ezziddine");
+        break;
+    }   
+
 }
-alert("Before seeing your marks, I'll talk about my favourit letter.\n"+
-"you ask himself about where ? i using my favourit letter in my first alert when i ask you about play or not."+
-"\nyour marks is " + counter + " of 6");
+
+
+
+alert('Thanks a million ' + Person +  ' for your time, your score is ' +  score + ' out of 7' + ' .\n I enjoyed creating this and hope you enjoyed playing');
 
 function Talk_to_me(){
     location.href = "https://www.instagram.com/alkiswani_moe/" ;
 }
+
 
 console.log ("who this is " + Person)
 console.log ("Did you guess my hometown " + city)
