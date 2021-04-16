@@ -19,3 +19,5 @@
 3. the alligment 
 4. the lists 
 - almost every element in the page was styeled.
+
+## Final touches on CSS using the branch called css them merge it with the main via github PR
