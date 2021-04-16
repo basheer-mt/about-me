@@ -1,111 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
 
+header div .column {
+    float: left;
+    width: 33.33%;
+}
+  
+  /* Clear floats after the columns */
+ header div .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+
+}
+
+#wish {
+  color: #2f5d62;
+}
+
+#work {
+  color: #2f5d62;
+}
+
+#edu {
+  color: #2f5d62;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main section {
+  font-size: 18px;
+}
+
+main section .column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+main section .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
     width: 960px;
     margin: auto;
-    background-color: #f1f1f1;
+    background-color: #f4eeff;
     text-decoration: none;
 }
 
-header img {
+#p3 {
+  text-align: center;
+}
+
+header {
+  /* background-color: #413c69; */
+  background-color: #383e56;
+ 
+}
+.column img {
     display: block;
     width: 140px;
     margin: auto;
 }
 
 header nav {
-    padding-top: 20px;
+    padding-top: 50px;
     text-align: center;
 }
 
-main h1 { 
-    text-align: center;
-    color: #810000;
+main h2 { 
+    text-align: left;
+    color: #413c69;
 }
-
-main p:nth-child(even){
-    color: #630000;
-    background-color: #ddd;
-    font-family: 'Karma', serif;
-    font-size: 23px;
-    padding: 10px;
-    text-align: center
-    
-}
-
-main p:nth-child(even){
-    word-spacing: 5px;
-    font-weight: 500;
-}
-
-main p:nth-child(odd){
-    word-spacing: 5px;
-}
-
-
-main p:nth-child(odd){
-    color: #810034;
-    background-color: #e8e8e8;
-    font-family: 'Karma', serif;
-    font-size: 23px;
-    padding: 10px;
-    text-align: center
-}
-
 p {
-    text-align: center;
-}
-#wish {
-    margin-top: 50px;
-    color: #111;
-    padding: 10px;
-    font-style: oblique;
-    text-align: center;
-    
+  color: #111;
+  font-style: normal;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
-ol {
-    background-color: #eeebdd;
-    color: #630000;
-    font-family: 'karma', serif;
-    font-size: 17px;
-    padding: 10px;
-    margin: 20px;
-}
-
-#work {
-    margin-top: 50px;
-    color: #111;
-    padding: 10px;
-    font-style: oblique;
-    text-align: center;
-}
-
-#wl {
-    background-color: #eeebdd;
-    color: #630000;
-    font-family: 'karma', serif;
-    font-size: 17px;
-    padding: 10px;
-    margin: 20px;
-}
-
-#edu {
-    margin-top: 50px;
-    color: #111;
-    padding: 10px;
-    font-style: oblique;
-    text-align: center;
-}
-
-#el {
-    background-color: #eeebdd;
-    color: #630000;
-    font-family: 'karma', serif;
-    font-size: 17px;
-    padding: 10px;
-    margin: 20px;
-}
 footer {
     text-align: center;
     margin-bottom: 30px;
@@ -119,11 +106,22 @@ footer {
     margin: 5px 2px;
     border-radius: 50%;
   }
+
+  .myFace:hover{
+    opacity: 0.7;
+  }
+  .tMi:hover{
+    opacity: 0.7;
+  }
   
   .fa:hover {
       opacity: 0.7;
   }
   
+  .fa-google {
+    background: #424642;
+    color: white;
+  }
   .fa-facebook {
     background: #3B5998;
     color: white;
@@ -150,3 +148,4 @@ footer {
     color: white;
   }
   
+ 
